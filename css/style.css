@@ -1,0 +1,87 @@
+#word-counter, h1{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #e68a00;
+    color: white;
+    margin-top: 0;
+}
+
+#word-counter, p{
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius:4px;
+    background-color: darkkhaki;
+    resize: none;
+    margin-top: 8px;
+}
+
+input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#word-counter, table {
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    padding-left: 5px;
+    margin-top: 50px;
+    width: 15%;
+    background-color: #e68a00;
+    box-sizing: border-box;
+    border: 2px solid #cccccc;
+
+}
+
+#word-counter td, #word-counter th {
+    border: 1px solid #555555;
+    padding: 5px 2px;
+}
+
+#word-counter tbody, #word-counter td{
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#word-counter thead{
+    background: #792396;
+    border-bottom: 4px solid #792396;
+}
+
+#word-counter thead, #word-counter th{
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #792396;
+}
+
+textarea {
+    width: 30%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin-top: 8px;
+}
+
+button[type=submit], select {
+    width: 6%;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
