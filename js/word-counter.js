@@ -38,7 +38,7 @@ window.Wordcounter = {
         $('#word-counter tbody').html(rows);
     },
 
-    getWords: function () {
+    getWord: function () {
         $.ajax(
             {
                 url: Wordcounter.apiUrl,
@@ -46,7 +46,7 @@ window.Wordcounter = {
             }).done(function (response) {
             console.log(response);
 
-            Wordcounter.displayWords(response);
+            Wordcounter.displayWords(response.content);
             Wordcounter.getWordCount()
         });
     },
@@ -71,7 +71,7 @@ window.Wordcounter = {
             }).done(function (response) {
             console.log(response);
 
-            Wordcounter.getWords(response);
+            Wordcounter.getWord(response);
         });
     },
 
@@ -90,7 +90,7 @@ window.Wordcounter = {
             }).done(function (response) {
             console.log(response);
 
-            Wordcounter.getWords(response);
+            Wordcounter.getWord(response);
         });
     },
 
@@ -121,5 +121,5 @@ window.Wordcounter = {
     }
 
 };
-Wordcounter.getWords();
+Wordcounter.getWord();
 Wordcounter.bindEvents();
