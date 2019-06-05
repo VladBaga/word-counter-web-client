@@ -1,6 +1,6 @@
 window.Wordcounter = {
 
-    apiUrl: "http://localhost:8085/words",
+    apiUrl: "http://localhost:8085",
 
     addWord: function () {
         var word = $("input[title='Word']").val();
@@ -10,7 +10,7 @@ window.Wordcounter = {
 
         $.ajax(
             {
-                url: Wordcounter.apiUrl,
+                url: Wordcounter.apiUrl + "/words",
                 method: "POST",
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(data)
@@ -38,28 +38,27 @@ window.Wordcounter = {
         $('#word-counter tbody').html(rows);
     },
 
-    getWord: function () {
+    getWords: function () {
         $.ajax(
             {
-                url: Wordcounter.apiUrl,
+                url: Wordcounter.apiUrl + "/words",
                 method: "GET"
             }).done(function (response) {
             console.log(response);
 
             Wordcounter.displayWords(response.content);
-            Wordcounter.getWordCount()
         });
     },
 
-    getWordCount: function (id) {
+    getWordCount: function () {
         $.ajax(
             {
-                url: Wordcounter.apiUrl + '?id=' + id,
+                url: Wordcounter.apiUrl + "/words",
                 method: "GET"
             }).done(function (response) {
             console.log(response);
 
-            Wordcounter.displayWords(response)
+            Wordcounter.displayWords(response.content)
         });
     },
 
@@ -71,7 +70,7 @@ window.Wordcounter = {
             }).done(function (response) {
             console.log(response);
 
-            Wordcounter.getWord(response);
+            Wordcounter.getWords(response);
         });
     },
 
@@ -90,7 +89,7 @@ window.Wordcounter = {
             }).done(function (response) {
             console.log(response);
 
-            Wordcounter.getWord(response);
+            Wordcounter.getWords(response);
         });
     },
 
@@ -121,5 +120,5 @@ window.Wordcounter = {
     }
 
 };
-Wordcounter.getWord();
+Wordcounter.getWords();
 Wordcounter.bindEvents();

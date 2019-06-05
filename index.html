@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Word Counter</title>
 
-    <link rel="stylesheet"  type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body bgcolor= "#f5f5dc">
+<body bgcolor="#f5f5dc">
 <div align="center">
-<h1>Word Counter</h1>
+    <h1>Word Counter</h1>
 </div>
 <div class="container" align="center">
     <p>Word Counter is an web interface where you can paste your texts and they will be counted by words and characters.
@@ -16,20 +16,19 @@
 </div>
 <form id="create-word-counter-form">
     <div align="center">
-    <input type="text" name="word" title="Word" placeholder="Insert you text here...">
+        <input type="text" name="word" title="Word" placeholder="Insert you text here...">
     </div>
     <div align="center">
         <button type="submit" title="Save">Save</button>
     </div>
-    <table align="center" id="word-counter">
-        <thead>
-        <tr>
-            <th>Words :</th>
-        </tr>
-        </thead>
-    <tbody></tbody>
-    </table>
 </form>
+<table align="center" id="word-counter">
+    <thead>
+    <tr>
+        <th>Words :</th>
+    </tr>
+    </thead>
+</table>
 
 <script src="js/lib/jquery-3.3.1.js"></script>
 <script src="js/word-counter.js"></script>
